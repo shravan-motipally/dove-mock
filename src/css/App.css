@@ -41,3 +41,48 @@
   height: 100%;
   width: 100%;
 }
+
+.imgToLogo {
+    height: 50%;
+    width: 50%;
+}
+
+.leftPanel {
+    background-color: skyblue;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.rightPanel {
+    background-color: white;
+}
+
+.bodyHeader {
+    padding: 10px;
+}
+
+.bodyText {
+    padding: 20px;
+    margin: 5px;
+    height: 400px;
+    background-color: white;
+    float: right;
+}
+
+.welcomeHeaderText {
+    font-family: Cambria;
+    font-size: 72px;
+    float: right;
+}
+
+.homePage {
+    height: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.topMost {
+    z-index: 1;
+    position: absolute;
+}

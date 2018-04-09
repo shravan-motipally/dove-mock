@@ -13,7 +13,19 @@ class Image extends React.Component {
         'Delaware - 09.jpg',
         'Delaware - 09.jpg',
         'Delaware - 10.jpg',
-        'Delaware - 11.jpg'];
+        'Delaware - 11.jpg',
+        'India - 01.jpg',
+        'India - 02.jpg',
+        'New Jersey - 01.jpg',
+        'New Jersey - 02.jpg',
+        'New York - 01.jpg',
+        'New York - 02.jpg',
+        'Sky - 01.jpg',
+        'Sky - 02.jpg',
+        'Sky - 03.jpg',
+        'Snow day - 01.jpg',
+        'Texas - 01.jpg',
+        'US - 01.jpg'];
     currentImg = 0;
 
     constructor(props) {

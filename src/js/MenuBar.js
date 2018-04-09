@@ -16,7 +16,7 @@ class MenuBar extends React.Component {
 
     render() {
         return (
-            <div className="navbar navbar-inverse">
+            <div className="navbar navbar-inverse topMost" >
                 <div className="navbar-inner">
                     <a className="brand" href="#">SM</a>
                     <ul className="nav">

@@ -13,3 +13,5 @@ This app is to show integration of react with boostrap 2.3.2. It has some older 
 ### npm start
 
 This will create the create-react-app server on port 3000 or whichever you specify.
+
+Please kill any apps on port 3000 before running npm start

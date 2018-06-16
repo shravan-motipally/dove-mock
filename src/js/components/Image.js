@@ -26,21 +26,23 @@ class Image extends React.Component {
         'Snow day - 01.jpg',
         'Texas - 01.jpg',
         'US - 01.jpg'];
-    currentImg = 0;
+    currentImgIdx = 0;
 
     constructor(props) {
         super(props);
-        this.currentImg = props.img;
+        this.currentImgIdx = props.imgIdx;
     }
 
     pic () {
-        var fullImg = this.imgFolder + "\\" + this.images[this.currentImg];
+        var fullImg = this.imgFolder + "\\" + this.images[this.currentImgIdx];
         return fullImg;
     }
 
     render() {
         return (
-            <img className="img-responsive imgsize" src={this.pic()} alt="Pictures"/>
+            <div>
+                <img className="img-responsive imgsize img-rounded" src={this.pic()} alt="Pictures"/>
+            </div>
         )
     }
 }

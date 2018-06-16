@@ -18,7 +18,7 @@ export default class Box extends React.Component {
     render () {
         return (
             <div>
-                <span className="homeBox" style={{width:this.width + this.widthUnit, height: this.height + this.heightUnit, display: "block"}}/>
+                <span className="homeBox" style={{width:this.width + this.widthUnit, height: this.height + this.heightUnit, display: "inline-block"}}/>
             </div>
         );
     }

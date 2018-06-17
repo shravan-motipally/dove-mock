@@ -1,4 +1,4 @@
-import {ABOUT, HOME, PHOTOS} from "../constants/page-types";
+import {ABOUT, HOME, PHOTOS, ERROR} from "../constants/page-types";
 import {changeLocation} from "../actions/locationActions";
 
 export function goToHome(dispatch) {
@@ -9,4 +9,7 @@ export function goToPhotos(dispatch){
 };
 export function goToAbout(dispatch) {
     dispatch(changeLocation(ABOUT));
+};
+export function goToError(dispatch) {
+    dispatch(changeLocation(ERROR));
 };

@@ -2,9 +2,9 @@ import React from 'react';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {about_path, base_path, home_path, photos_path} from '../constants/all-routes';
-import {ABOUT, HOME, PHOTOS} from "../constants/page-types";
-import {goToAbout, goToHome, goToPhotos} from "../dispatchers/locationDispatchers";
+import {about_path, base_path, home_path, photos_path, not_found_path} from '../constants/all-routes';
+import {ABOUT, HOME, PHOTOS, ERROR} from "../constants/page-types";
+import {goToAbout, goToHome, goToPhotos, goToError} from "../dispatchers/locationDispatchers";
 
 const mapStateToProps = state => {
   return { currentPage: state.currentPage };
@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         goToHome : () => goToHome(dispatch),
         goToPhotos: () => goToPhotos(dispatch),
-        goToAbout: () => goToAbout(dispatch)
+        goToAbout: () => goToAbout(dispatch),
+        goToError: () => goToError(dispatch)
     };
 };
 
@@ -32,7 +33,9 @@ class MenuBar extends React.Component {
         let locationPath = this.props.location.pathname;
         let currentPage = this.props.currentPage;
 
-        if ((locationPath === base_path || locationPath === home_path) && currentPage !== HOME)
+        if ((locationPath === not_found_path) && currentPage !== ERROR)
+            this.props.goToError();
+        else if ((locationPath === base_path || locationPath === home_path) && currentPage !== HOME)
             this.props.goToHome();
         else if (locationPath === photos_path && currentPage !== PHOTOS)
             this.props.goToPhotos();

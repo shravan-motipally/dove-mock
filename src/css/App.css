@@ -79,6 +79,8 @@ html {
     margin: 5px;
     background-color: white;
     float: right;
+    font-family: "Cambria Math";
+    font-size: medium;
 }
 
 .welcomeHeaderText {

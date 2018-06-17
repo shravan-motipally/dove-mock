@@ -25,7 +25,8 @@ class Image extends React.Component {
         'Sky - 03.jpg',
         'Snow day - 01.jpg',
         'Texas - 01.jpg',
-        'US - 01.jpg'];
+        'US - 01.jpg',
+        'Error.jpg'];
     currentImgIdx = 0;
 
     constructor(props) {

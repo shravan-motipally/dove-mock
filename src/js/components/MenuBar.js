@@ -1,10 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router';
-import { connect } from 'react-redux';
-import { changeLocation } from "../actions/locationActions";
-import { Link } from 'react-router-dom';
-import { base_path, home_path, photos_path, about_path } from '../constants/all-routes';
-import { HOME, PHOTOS, ABOUT } from "../constants/page-types";
+import {withRouter} from 'react-router';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {about_path, base_path, home_path, photos_path} from '../constants/all-routes';
+import {ABOUT, HOME, PHOTOS} from "../constants/page-types";
+import {goToAbout, goToHome, goToPhotos} from "../dispatchers/locationDispatchers";
 
 const mapStateToProps = state => {
   return { currentPage: state.currentPage };
@@ -12,15 +12,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        goToHome : () => {
-            dispatch(changeLocation(HOME));
-        },
-        goToPhotos: () => {
-            dispatch(changeLocation(PHOTOS));
-        },
-        goToAbout: () => {
-            dispatch(changeLocation(ABOUT));
-        }};
+        goToHome : () => goToHome(dispatch),
+        goToPhotos: () => goToPhotos(dispatch),
+        goToAbout: () => goToAbout(dispatch)
+    };
 };
 
 class MenuBar extends React.Component {

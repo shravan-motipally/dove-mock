@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Box from './Box';
 import Image from './Image';
 import MenuBar from './MenuBar';
+import '../../css/App.css';
+import '../../css/bootstrap.css';
 
 let text = () => {
     return "";

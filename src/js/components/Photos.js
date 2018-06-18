@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from './Image';
 import Box from './Box';
 import MenuBar from './MenuBar';
 
@@ -15,14 +15,18 @@ const Photos = () => (
             <div className="row-fluid">
                 <div className="container-fluid">
                     <div className="row-fluid">
-                        <Box width={100} height={15} widthUnit={"%"} heightUnit={"vh"}/>
-                        <div className='rightPanel span6 offset3'>
-                            <div className="row-fluid bodyHeader">
-                                <h1><span className="welcomeHeaderText">My Photos!</span></h1>
-                            </div>
-                            <div className="row-fluid">
-                                <p className="bodyText">
-                                </p>
+                        <Box width={100} height={10} widthUnit={"%"} heightUnit={"vh"}/>
+                        <div className='rightPanel span9 offset3'>
+                            <div className="container-fluid">
+                                <div className="row-fluid bodyHeader">
+                                    <h1><span className="welcomeHeaderText">My Photos!</span></h1>
+                                </div>
+                                <Box width={100} height={5} widthUnit={"%"} heightUnit={"vh"}/>
+                                <div className="row-fluid">
+                                    <div className="span10">
+                                        <Image imgIdx={6} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

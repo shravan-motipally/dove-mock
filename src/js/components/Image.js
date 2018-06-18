@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 class Image extends React.Component {
     imgFolder ='img';
@@ -28,10 +29,12 @@ class Image extends React.Component {
         'US - 01.jpg',
         'Error.jpg'];
     currentImgIdx = 0;
+    dynamic = false;
 
     constructor(props) {
         super(props);
         this.currentImgIdx = props.imgIdx;
+        this.dynamic = props.isDynamic;
     }
 
     pic () {
@@ -40,12 +43,27 @@ class Image extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <img className="img-responsive imgsize img-rounded" src={this.pic()} alt="Pictures"/>
-            </div>
-        )
+        if (!this.dynamic) {
+            return (
+                <div>
+                    <img className="img-responsive imgsize img-rounded" src={this.pic()} alt="Pictures"/>
+                </div>
+            )
+        }
+        else
+        {
+            return (
+                <div>
+                    <img/>
+                </div>
+            )
+        }
     }
 }
+
+Image.propTypes = {
+    imgIdx: PropTypes.number.isRequired,
+    isDynamic: PropTypes.bool
+};
 
 export default Image;
